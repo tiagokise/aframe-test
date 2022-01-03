@@ -10,25 +10,32 @@
   <body>
     <a-scene >
       <a-assets>
+        <a-asset-item id="astronaut-obj" src="assets/R5J2Posed.obj"></a-asset-item>
         <a-asset-item id="skull-obj" src="assets/12140_Skull_v3_L2.obj"></a-asset-item>
         <a-asset-item id="skull-mtl" src="assets/12140_Skull_v3_L2.mtl"></a-asset-item>
+        <a-asset-item id="triceratops-gltf" src="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+        <a-asset-item id="heart-gltf" src="assets/scene.gltf" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
         <!-- <img id="image" src="assets/image.jpg"> -->
-
+      
       </a-assets>
 
       <a-entity light="type:point; castShadow: false" ></a-entity>
       <!-- <a-plane color="#FFC65D" src="#plane" position="0 1.5 -5" width="10" height="3"></a-plane> -->
       <!-- <a-plane color="#FFC65D" src="#plane" position="5 1.5 0" rotation="0 -90 0" width="10" height="3"></a-plane> -->
       <!-- <a-plane color="#FFC65D" src="#plane" position="-5 1.5 0" rotation="0 90 0" width="10" height="3"></a-plane> -->
+      
+      <a-obj-model src="#skull-obj" mtl="#skull-mtl" position="0 1.25 -2" rotation="-90 0 0" scale=".05 .05 .05"></a-obj-model>
+      <a-obj-model src="#astronaut-obj" mtl="" position="1.5 1.25 -2" rotation="0 0 0" scale=".025 .025 .025"></a-obj-model>
 
       <!-- <a-text position="0 2.2 -4.89" value="Team\nColumbia" width="10" color="#FFFFFF" align="center" ></a-text> -->
       <!-- <a-image position="3 1.5 -4.89" src="#image" width="2" height="2" ></a-image> -->
 
-      <a-obj-model src="#skull-obj" mtl="#skull-mtl" position="0 1.25 -2" rotation="-90 0 0" scale=".05 .05 .05"></a-obj-model>
-
+      
       <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
       <!-- <a-sphere position="0 1.25 -3" radius="0.5" color="#EF2D5E" roughness=4></a-sphere> -->
       <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      <a-gltf-model src="#triceratops-gltf" position="0 1.25 2" rotation="0 0 0" scale=".01 .01 .01"></a-gltf-model>
+      <a-gltf-model src="#heart-gltf" position="0 3 2" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
 
       <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#ffffff"></a-plane>
       <a-sky color="#e6f7ff"></a-sky>
